@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/mohameduzair/blockChain/JSweb3_2/smart-contract_lottery/contracts/Raffle.sol": {
-      "lastModificationDate": 1655994946626,
+      "lastModificationDate": 1656149265667,
       "contentHash": "b1dce1a5658adf9953ae87ba6adbbf77",
       "sourceName": "contracts/Raffle.sol",
       "solcConfig": {

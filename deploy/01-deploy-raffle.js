@@ -7,7 +7,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const { deployer } = await getNamedAccounts()
     let VRFCoordinatorV2Address, subscriptionId
     const chainId = network.config.chainId
-    const VRF_SUB_FUND_AMOUNT = ethers.utils.parseEther("10")
+    const VRF_SUB_FUND_AMOUNT = ethers.utils.parseEther("30")
 
     if (developmentChains.includes(network.name)) {
         const VRFCoordinatorV2Mock = await ethers.getContract("VRFCoordinatorV2Mock")
@@ -48,6 +48,5 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
         await verify(raffle.address, args)
     }
     log("-----------!!!!!------!!!!!---!!!!!-----!!!!!----------")
-
-    module.exports.tags = ["all", "raffle"]
 }
+module.exports.tags = ["all", "raffle"]
