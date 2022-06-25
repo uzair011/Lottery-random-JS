@@ -125,5 +125,7 @@ const { developmentChains, networkConfig } = require("../../helper-hardhat-confi
               })
           })
 
-          describe("fulFillRandomWords", () => {})
+          describe("fulFillRandomWords", () => {
+              beforeEach(async () => {})
+          })
       })
