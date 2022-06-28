@@ -18,7 +18,7 @@ developmentChains.includes(network.name)
               it("Works with live chainlink keepers and chainlink vrf, and we get a random winner ", async () => {
                   // enter the rafle
                   const startingTimeStamp = await raffle.getLatestTimeStamp()
-                  const accounts = await raffle.ethers.getSigners()
+                  const accounts = await ethers.getSigners()
 
                   await new Promise(async (resolve, reject) => {
                       raffle.once("Winner picked", async () => {
@@ -43,7 +43,7 @@ developmentChains.includes(network.name)
                               reject(e)
                           }
                       })
-                      await accountConnectedRaffle.enterRaffle({ value: raffleEntranceFee })
+                      await raffle.enterRaffle({ value: raffleEntranceFee })
                       const winnerStartingBalnce = await accounts[0].getBalance()
                   })
 
