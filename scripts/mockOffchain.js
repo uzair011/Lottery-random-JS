@@ -4,6 +4,7 @@ async function mockKeepers() {
     const raffle = await ethers.getContract("Raffle")
     const checkData = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(""))
     const { upkeepNeeded } = await raffle.callStatic.checkUpkeep(checkData)
+    // check the error
     if (upkeepNeeded) {
         const tx = await raffle.performUpkeep(checkData)
         const txReceipt = await tx.wait(1)
